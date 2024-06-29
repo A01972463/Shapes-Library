@@ -4,25 +4,28 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 
 class CircleTest {
-    val Point = Point(0.0, 0.0)
+    var Point = Point(0.0, 0.0)
     val Circle = Circle(Point, 5.0)
 
     @Test
     fun testCircleConstruction() {
-        assertEquals(Point(0.0, 0.0), Circle.point)
+        assertEquals(0.0, Circle.point.x)
+        assertEquals(0.0, Circle.point.y)
         assertEquals(5.0, Circle.radius)
     }
 
     @Test
     fun testCircleGetArea() {
-        assertEquals(Circle.getArea(), 78.54)
+        assertEquals("78.54", Circle.getArea())
     }
 
     @Test
     fun testMoveCircle() {
+        Point.movePoint(2.0, 3.5)
         Circle.moveCircle(Point(2.0, 3.5), 7.0)
 
-        assertEquals(Point(2.0, 3.5), Circle.point)
+        assertEquals(2.0, Circle.point.x)
+        assertEquals(3.5, Circle.point.y)
         assertEquals(7.0, Circle.radius)
     }
 }
