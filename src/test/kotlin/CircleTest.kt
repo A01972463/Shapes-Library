@@ -28,7 +28,7 @@ class CircleTest {
         assertEquals(3.5, Circle.point.y)
         assertEquals(7.0, Circle.radius)
 
-        var newPoint = Point(-2.0, -3.5)
+        val newPoint = Point(-2.0, -3.5)
         Circle.moveCircle(newPoint, 10.0)
 
         assertEquals(-2.0, Circle.point.x)
