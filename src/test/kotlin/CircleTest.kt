@@ -1,5 +1,5 @@
-import org.example.Circle
 import org.example.Point
+import org.example.Circle
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
