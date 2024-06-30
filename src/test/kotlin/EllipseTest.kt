@@ -17,7 +17,7 @@ class EllipseTest {
 
     @Test
     fun testEllipseGetArea() {
-        assertEquals("109.96", Ellipse.getArea)
+        assertEquals("109.96", Ellipse.getArea())
     }
 
     @Test
@@ -26,8 +26,8 @@ class EllipseTest {
         Point.movePoint(2.0, 3.5)
         Ellipse.moveEllipse(Point, 7.0, 10.0)
 
-        assertEquals(0.0, Ellipse.point.x)
-        assertEquals(0.0, Ellipse.point.y)
+        assertEquals(2.0, Ellipse.point.x)
+        assertEquals(3.5, Ellipse.point.y)
         assertEquals(7.0, Ellipse.height)
         assertEquals(10.0, Ellipse.width)
 
@@ -36,7 +36,7 @@ class EllipseTest {
         Ellipse.moveEllipse(newPoint, 10.0, 15.0)
 
         assertEquals(-2.0, Ellipse.point.x)
-        assertEquals(-3.5.0, Ellipse.point.y)
+        assertEquals(-3.5, Ellipse.point.y)
         assertEquals(10.0, Ellipse.height)
         assertEquals(15.0, Ellipse.width)
 

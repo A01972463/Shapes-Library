@@ -13,12 +13,12 @@ class LineTest {
         assertEquals(0.0, Line.pointA.x)
         assertEquals(0.0, Line.pointA.y)
         assertEquals(2.0, Line.pointB.x)
-        assertEquals(3.5, Line.pointB.x)
+        assertEquals(3.5, Line.pointB.y)
     }
 
     @Test
     fun testLineGetSlope() {
-        assertEquals("1.75", Line.getSlope())
+        assertEquals("1.750", Line.getSlope())
     }
 
     @Test
@@ -36,17 +36,17 @@ class LineTest {
         assertEquals(2.0, Line.pointA.x)
         assertEquals(3.5, Line.pointA.y)
         assertEquals(4.0, Line.pointB.x)
-        assertEquals(6.0, Line.pointB.x)
+        assertEquals(6.0, Line.pointB.y)
 
 //        New Point
         val newPointA = Point(-2.0, -3.5)
         val newPointB = Point(-4.0, -6.0)
-        Line.moveLine(newPoint)
+        Line.moveLine(newPointA, newPointB)
 
         assertEquals(-2.0, Line.pointA.x)
         assertEquals(-3.5, Line.pointA.y)
         assertEquals(-4.0, Line.pointB.x)
-        assertEquals(-6.0, Line.pointB.x)
+        assertEquals(-6.0, Line.pointB.y)
 
 //        Direct Point
         Line.moveLine(Point(0.0, 0.0), Point(2.0, 3.5))
@@ -54,6 +54,6 @@ class LineTest {
         assertEquals(0.0, Line.pointA.x)
         assertEquals(0.0, Line.pointA.y)
         assertEquals(2.0, Line.pointB.x)
-        assertEquals(3.5, Line.pointB.x)
+        assertEquals(3.5, Line.pointB.y)
     }
 }
