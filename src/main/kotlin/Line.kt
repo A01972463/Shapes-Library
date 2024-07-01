@@ -11,8 +11,8 @@ class Line(var pointA: Point,
     }
 
     fun getLength(): String {
-        val x = pointB.y - pointA.y
-        val y = pointB.x - pointA.x
+        val x = pointB.x - pointA.x
+        val y = pointB.y - pointA.y
 
         val sum = (x * x) + (y * y)
 

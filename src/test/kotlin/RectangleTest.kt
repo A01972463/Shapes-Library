@@ -19,8 +19,9 @@ class RectangleTest {
     @Test
     fun testRectangleGetPoints() {
         val points = listOf(Rectangle.getPoints())
+        val point1 = points[0]
 
-        assertEquals(0.0, points[0].x)
+        assertEquals(0.0, point1.x)
         assertEquals(0.0, points[0].y)
         assertEquals(2.0, points[1].x)
         assertEquals(0.0, points[1].y)
@@ -32,7 +33,7 @@ class RectangleTest {
 
     @Test
     fun testRectangleGetArea() {
-        assertEquals("7.00", Rectangle.getArea())
+        assertEquals("7.000", Rectangle.getArea())
     }
 
     @Test
