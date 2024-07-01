@@ -16,20 +16,15 @@ class RectangleTest {
         assertEquals(-3.5, Rectangle.pointB.y)
     }
 
-//    @Test
-//    fun testRectangleGetPoints() {
-//        val points = listOf(Rectangle.getPoints())
-//        val point1 = points[0]
-//
-//        assertEquals(0.0, point1.x)
-//        assertEquals(0.0, points[0].y)
-//        assertEquals(2.0, points[1].x)
-//        assertEquals(0.0, points[1].y)
-//        assertEquals(2.0, points[2].x)
-//        assertEquals(-3.5, points[2].y)
-//        assertEquals(0.0, points[3].x)
-//        assertEquals(-3.5, points[3].y)
-//    }
+    @Test
+    fun testRectangleGetPoints() {
+        val points = Rectangle.getPoints()
+
+        assertEquals(Pair(0.0, 0.0), points[0])
+        assertEquals(Pair(2.0, 0.0), points[1])
+        assertEquals(Pair(2.0, -3.5), points[2])
+        assertEquals(Pair(0.0, -3.5), points[3])
+    }
 
     @Test
     fun testRectangleGetArea() {

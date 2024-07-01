@@ -1,13 +1,13 @@
 package org.example
 
 open class Rectangle(var pointA: Point, var pointB: Point) {
-    fun getPoints(): Any {
+    fun getPoints(): List<Pair<Double, Double>> {
         val x1 = pointA.x
         val x2 = pointB.x
         val y1 = pointA.y
         val y2 = pointB.y
 
-        return listOf(pointA, Point(x2, y1), pointB, Point(x1, y2))
+        return listOf(Pair(x1, y1), Pair(x2, y1), Pair(x2, y2), Pair(x1, y2))
     }
 
     fun getArea(): String {

@@ -14,19 +14,15 @@ class SquareTest {
         assertEquals(5.0, Square.sideLength)
     }
 
-//    @Test
-//    fun testSquareGetPoints() {
-//        val points = listOf(Square.getPoints())
-//
-//        assertEquals(0.0, points[0].x)
-//        assertEquals(0.0, points[0].y)
-//        assertEquals(5.0, points[1].x)
-//        assertEquals(0.0, points[1].y)
-//        assertEquals(5.0, points[2].x)
-//        assertEquals(-5.0, points[2].y)
-//        assertEquals(0.0, points[3].x)
-//        assertEquals(-5.0, points[3].y)
-//    }
+    @Test
+    fun testSquareGetPoints() {
+        val points = Square.getPoints()
+
+        assertEquals(Pair(0.0, 0.0), points[0])
+        assertEquals(Pair(5.0, 0.0), points[1])
+        assertEquals(Pair(5.0, -5.0), points[2])
+        assertEquals(Pair(0.0, -5.0), points[3])
+    }
 
     @Test
     fun testSquareGetArea() {
